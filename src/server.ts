@@ -32,9 +32,8 @@ server.use(express.static(path.join(__dirname, "../public"))); // Pasta pública
 server.use(mainRoutes); // Roteamento principal (definido em `routes/index.ts`)
 
 server.use((req, res) => {
-    res.send("Página não encontrada"); // Resposta padrão para rotas não definidas
+    res.render('pages/404'); // Resposta padrão para rotas não definidas
 })
-
 
 // ======================================
 // 6. Inicialização do servidor
